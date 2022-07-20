@@ -1,8 +1,11 @@
 console.log("Hello world!!!");
 
 const fs = require("fs");
+const os = require("os");
 
-fs.appendFile("message.txt", "Hello Message!", (err) => {
+const userInfo = os.userInfo();
+
+fs.appendFile("message.txt", `userData: ${userInfo.username}`, (err) => {
   if (err) {
     console.log("error....", err);
   }
