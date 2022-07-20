@@ -32,7 +32,8 @@
 const express = require("express");
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static("public")); // middleware
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   res.send("Welcome Home");
@@ -40,6 +41,17 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.send("About Page");
+});
+
+app.get("/view", (req, res) => {
+  res.render("viewPage"); // file adding
+});
+
+app.get("/api", (req, res) => {
+  res.json({
+    name: "Mr.Ash",
+    degree: "BE-ECE",
+  }); // file adding
 });
 
 app.listen(3000, console.log("server Started at port 3000"));
