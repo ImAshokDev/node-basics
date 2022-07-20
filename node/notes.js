@@ -1,3 +1,7 @@
 console.log("notes started");
 
-module.exports.age = 26;
+module.exports.addNote = (a, b) => {
+  console.log("Giver Value is ", a, b);
+
+  return a + b;
+};
