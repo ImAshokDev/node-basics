@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ashokDev10/node-basics#readme",
   "dependencies": {
+    "express": "^4.18.1",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.19",
     "yargs": "^17.5.1"
