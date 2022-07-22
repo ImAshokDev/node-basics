@@ -36,6 +36,12 @@ const StudentListType = new GraphQLObjectType({
     rank: {
       type: GraphQLString,
     },
+    bookDetails: {
+      type: BookType,
+      resolve(parent, args) {
+        return _.find(books, { id: parent.id });
+      },
+    },
   }),
 });
 
